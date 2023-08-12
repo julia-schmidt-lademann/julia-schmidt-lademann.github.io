@@ -1,15 +1,10 @@
-layout
-default
-{% include 01-name.md %}
+---
+layout: home
+title: Home
+landing-title: 'Hi, my name is Julia'
+description: null
+image: null
+author: null
+show_tile: false
+---
 
-
-{% include 02-contact.md %}
-
-
-{% include 03-python.md %}
-
-
-{% include 04-tableau.md %}
-
-
-{% include 05-sql.md %}

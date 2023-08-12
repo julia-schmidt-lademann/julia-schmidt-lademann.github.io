@@ -1,3 +1,36 @@
-theme: jekyll-theme-minimal
+# site settings
 title: My Portfolio
-description: Bookmark this to keep an eye on my project updates!
+email: julia.schmidt.lademann@gmail.com
+description: Julia chmidt-Lademann
+baseurl: "/forty-jekyll-theme" # the subpath of your site, e.g. /blog
+url: https://julia-schmidt-lademann.github.io/
+author: Julia chmidt-Lademann
+city: Austin
+state: TX
+zip_code: 78749
+country: United States of America
+phone: (737) 296-9697
+
+# homepage tiles
+tiles-source: pages # accepts "posts" or "pages"
+tiles-count: 6
+
+# social settings (key must match name of font awesome icon)
+# see https://fontawesome.com/icons?d=gallery&p=2&s=brands
+# Icons are not shown if value is empty
+# You need to restart jekyll for changes to have an effect
+socials:
+  GitHub: https://github.com/julia-schmidt-lademann
+  LinkedIn: https://www.linkedin.com/in/julia-schmidt-lademann
+
+# build settings
+markdown: kramdown
+
+sass:
+  style: compressed
+
+exclude:
+- "*.gemspec"
+- LICENSE.md
+- CONTRIBUTING.md
+- README.md 
