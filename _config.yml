@@ -8,8 +8,7 @@ relative_permalinks: true
 
 # Setup
 title:            Julia Schmidt-Lademann
-tagline:          'A Jekyll theme'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+description:      'The Data expert you have been looking for!'
 url:              http://hyde.getpoole.com
 baseurl:          /
 
