@@ -3,13 +3,13 @@ default
 {% include 01-name.md %}
 
 
-{% include 02-image.md %}
+{% include 02-contact.md %}
 
 
-{% include 03-links.md %}
+{% include 03-python.md %}
 
 
-{% include 04-lists.md %}
+{% include 04-tableau.md %}
 
 
-{% include 05-emphasis.md %}
+{% include 05-sql.md %}
