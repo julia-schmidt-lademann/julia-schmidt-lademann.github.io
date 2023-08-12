@@ -8,12 +8,10 @@ permalink:        pretty
 # Setup
 title:            Julia Schmidt-Lademann
 description:      'The Data expert you have been looking for!'
-url:              http://hyde.getpoole.com
-baseurl:          /
+url:              https://julia-schmidt-lademann.github.io/
 
 author:
   name:           'Mark Otto'
-  url:            https://twitter.com/mdo
 
 paginate:         5
 
@@ -21,4 +19,4 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/poole/hyde
+  repo:           https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io
