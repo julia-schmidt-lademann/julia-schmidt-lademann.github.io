@@ -13,6 +13,7 @@ url:              https://julia-schmidt-lademann.github.io/
 author:
   name:           'Mark Otto'
 
+paginate:         100
 
 # Custom vars
 version:          2.1.0
