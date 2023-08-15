@@ -2,6 +2,9 @@
 layout: post
 title: Excel Showcase
 ---
+
+*There is no visual for this showcase as it contains personal information.*
+
 **Background:**
 - I am interested in creating a zero-based budgeting file. 
 - The Setup mirror the setup of the popular Budgeting app YNAB.
