@@ -2,7 +2,7 @@
 layout: post
 title: Tableau Showcase
 ---
-![Dashboard](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
+![Dashboard](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/Startup%20quadrant.JPG?raw=true)
 
 **Background:**
 
