@@ -1,7 +1,5 @@
----
-layout: post
-title: Excel Showcase
----
+##Excel Showcase
+#
 
 *There is no visual for this showcase as it contains personal information.*
 

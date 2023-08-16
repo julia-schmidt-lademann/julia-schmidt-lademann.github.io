@@ -1,7 +1,5 @@
----
-layout: post
-title: Tableau Showcase
----
+##Tableau Showcase
+
 ![Dashboard](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/Startup%20quadrant.JPG?raw=true)
 
 **Background:**

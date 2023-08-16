@@ -1,5 +1,3 @@
----
-layout: post
-title: SQL Showcase
----
+##SQL Showcase
+
 
