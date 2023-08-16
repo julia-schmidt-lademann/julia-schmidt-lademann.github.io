@@ -1,6 +1,6 @@
 ## [Best Ball Data Bowl](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/best_ball.py)
 
-####Plan:
+#### Plan:
 - In July 2023 data covering past fantasy draft data was made available.
 - In combination with the nfl_data_py library I wanted to explore the available data and identify interesting learnings. 
 - I decided not to include nfl_data_py, as that data is not available when the draft is being done, and therefore any insights from it are not replicable at the time of a draft
