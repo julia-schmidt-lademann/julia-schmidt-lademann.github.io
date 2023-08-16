@@ -5,38 +5,38 @@ Assuming a table B containing marketing outreach completed to the different memb
 
 **Question 1**: 
 How many wasted marketing touchpoints are being sent out (wasted touchpoints = sent to either members already signed up or no longer eligible.)?
-    
-    -- Here I am transforming the table by making ID the unique key and transforming multiple rows for the different actions into columns.
-    WITH pivoted as (
+~~~~sql
+-- Here I am transforming the table by making ID the unique key and transforming multiple rows for the different actions into columns.
+WITH pivoted as (
+SELECT id
+, date AS eligible_date
+, coalesce(lost_date,'3000-12-31') AS lost_date
+, coalesce(signup_date,'3000-12-31') AS signup_date
+FROM table_A 
+  LEFT JOIN (
     SELECT id
-    , date AS eligible_date
-    , coalesce(lost_date,'3000-12-31') AS lost_date
-    , coalesce(signup_date,'3000-12-31') AS signup_date
+      , date as lost_date
     FROM table_A 
-      LEFT JOIN (
-        SELECT id
-          , date as lost_date
-        FROM table_A 
-        WHERE action ='eligibility lost'
-      ) lost using (id)
-      LEFT JOIN (
-        SELECT id
-          , date as signup_date
-        FROM table_A 
-        WHERE action ='signed up'
-      ) signup using (id)
-    where   action ='eligibility gained'
-    )
-    -- Here I am joining together the tables and counting touchpoints
-    -- Since I am not counting distinct I can use user_id to count the rows
-    -- This is assuming that the user_id column is not empty, this should be verified and otherwise corrected.
-    -- I am using safe_divide to ensure downstream
-    SELECT COUNT(CASE WHEN table_b.date>lost_date OR table_b.date>signup_date THEN user_id ELSE null END) AS wasted_touchpoints
-    , count(*) AS total_touchpoints
-    , safe_divide(count(CASE WHEN table_b.date>lost_date OR tableb.date>signup_date THEN user_id ELSE null END),count(*)) AS perc_wasted
-    FROM table_b
-    LEFT JOIN pivoted ON table_b.user_id=pivoted.id
-
+    WHERE action ='eligibility lost'
+  ) lost using (id)
+  LEFT JOIN (
+    SELECT id
+      , date as signup_date
+    FROM table_A 
+    WHERE action ='signed up'
+  ) signup using (id)
+where   action ='eligibility gained'
+)
+-- Here I am joining together the tables and counting touchpoints
+-- Since I am not counting distinct I can use user_id to count the rows
+-- This is assuming that the user_id column is not empty, this should be verified and otherwise corrected.
+-- I am using safe_divide to ensure downstream
+SELECT COUNT(CASE WHEN table_b.date>lost_date OR table_b.date>signup_date THEN user_id ELSE null END) AS wasted_touchpoints
+, count(*) AS total_touchpoints
+, safe_divide(count(CASE WHEN table_b.date>lost_date OR tableb.date>signup_date THEN user_id ELSE null END),count(*)) AS perc_wasted
+FROM table_b
+LEFT JOIN pivoted ON table_b.user_id=pivoted.id
+~~~~
 
 Question 2: 
 Churn per month (defined as members losing eligibilty in a month / members with eligibility on the last day of the previous month)
