@@ -11,19 +11,23 @@
 - Import & concat data
 - Identify which teams advance to the next round
 - Calculate adp value for each pick made at the time of the pick
-- give each ADP value a weighting. 
-- calculate ADP value and weighted ADP value after each round and by player position
-- create the correlation between the ADP value and the round achieved
-- create groupings to see what decile ADP value at round 14 (widely accepted standard) falls into
-- compare the groupings between the weighted and unweighted ADP values
+- Give each ADP value a weighting. 
+- Calculate ADP value and weighted ADP value after each round and by player position
+- Create the correlation between the ADP value and the round achieved
+- Create groupings to see what decile ADP value at round 14 (widely accepted standard) falls into
+- Compare the groupings between the weighted and unweighted ADP values
 
 #### Findings:
-- Weighting gives the correlation (i.e. prediction value) a ~17% boost. 
-- Round giving the best acuracy is 13, but from 9 onwards there is really not much improvement. could save time
-- correlation by position is overall lower than first 9 or 13 rounds; but weighting has a much bigger impact. 
+- Weighting gives the correlation (i.e. prediction value) a ~18% drop in correlation. This seems wildly unrealistic. 
+- Round giving the best accuracy is 13, but from 9 onwards there is really not much improvement. 
+- Correlation by position is overall lower than first 9 or 13 rounds; but weighting has a much bigger negative impact. 
+
+![Correlation](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/BBDB.JPG?raw=true)
 
 #### Next steps:
-- evaluate which teams 
+- I want to predict if a team with a certain value will make the (fantasy) playoffs. 
+- Will weighting result in better accuracy of predicting this?
+- If a team falls into a very different decile when weighting ADP, what does that tell us, and what commonalities are there between these teams.
 
 ----------------------------------------------------------------------------------------------------
 
