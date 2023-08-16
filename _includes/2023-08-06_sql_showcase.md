@@ -88,7 +88,7 @@ Assuming a table of employee, manager and employee age. Please return a table co
       GROUP BY 1 
       ORDER BY 1 desc
 ~~~~
-- In the second step, please return all members underneath a manager including teams of other managers.
+- In the second step, please return all members underneath a manager including teams of middle-managers.
 ~~~~sql
       with recursive_base as (
           select employee, manager,age
