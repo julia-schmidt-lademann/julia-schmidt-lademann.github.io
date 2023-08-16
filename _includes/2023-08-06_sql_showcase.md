@@ -40,7 +40,7 @@ LEFT JOIN pivoted ON table_b.user_id=pivoted.id
 
 Question 2: 
 Churn per month (defined as members losing eligibilty in a month / members with eligibility on the last day of the previous month)
-    
+~~~~sql
      -- Here I am transforming the table by making ID the unique key and transforming multiple rows for the different actions into columns.
     WITH pivoted as (
     SELECT id
@@ -76,20 +76,20 @@ Churn per month (defined as members losing eligibilty in a month / members with 
     OVER (PARTITION BY month ORDER BY month ASC)) AS perc_churned
     from aggregated
     group by 1 order by 1 desc
-
+~~~~
 #### Part 2: 
 Assuming a table of employee, manager and employee age. Please return a table containing each manager's team size and their team's average age. 
 - In the first step assume there is only 2 levels of hierarchy.
-
+~~~~sql
       SELECT manager
       , count(distinct employee) total_employees
       , round(avg(age,2) as average_age
       FROM base 
       GROUP BY 1 
       ORDER BY 1 desc
-
+~~~~
 - In the second step, please return all members underneath a manager including teams of other managers.
-
+~~~~sql
       with recursive_base as (
           select employee, manager,age
           from base 
@@ -108,3 +108,4 @@ Assuming a table of employee, manager and employee age. Please return a table co
       select manager, count(distinct employee) total_employees, round(avg(age,2) as average_age
       from recursive_base
       group by 1 order by 1 desc
+~~~~
