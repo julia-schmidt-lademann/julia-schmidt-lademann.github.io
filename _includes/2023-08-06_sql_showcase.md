@@ -109,3 +109,6 @@ Assuming a table of employee, manager and employee age. Please return a table co
       from recursive_base
       group by 1 order by 1 desc
 ~~~~
+
+----------------------------------------------------------------------------------------------------
+

@@ -13,3 +13,6 @@
 **Learnings:**
 - Due to the setup on my machine I struggle a lot with CSS and the frontend layout of websites. 
 - The Flask terms were very intuitive allowing for an intricate setup using easy to follow logic
+
+----------------------------------------------------------------------------------------------------
+

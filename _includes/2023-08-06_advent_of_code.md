@@ -14,3 +14,7 @@
 - Seeing the challenges I ran into it clearly showed 
 - Every puzzle challenges a different aspect and requires the processing of data in very different formats, which had a lot of application in the real world
 - The split between part 1 and 2 encourages users to build solutions that can be easily adapted and are not too rigid. This too is very applicable in the real world.
+
+
+----------------------------------------------------------------------------------------------------
+

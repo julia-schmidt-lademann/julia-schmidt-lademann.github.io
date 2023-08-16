@@ -1,3 +1,4 @@
+
 ## Excel Showcase
 
 
@@ -28,4 +29,6 @@
 - The transactions are then presented split by category 
 - Formulas to create a unique list of sheet names power the ability to quickly jump between tabs allowing the bulk of the sheets to remain hidden for a quicker and cleaner layout
 - Using the Excel Currency Financial Market Information the file allows for mutliple currencies to be combined in a single report
+
+----------------------------------------------------------------------------------------------------
 
