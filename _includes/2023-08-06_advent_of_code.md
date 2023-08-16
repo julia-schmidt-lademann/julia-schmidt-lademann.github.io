@@ -1,4 +1,4 @@
-## Python Showcase
+## Advent of Code
 
 
 ![Stars](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/AoC.JPG?raw=true)
