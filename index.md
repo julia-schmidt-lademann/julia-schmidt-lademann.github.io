@@ -11,4 +11,5 @@ layout default {% include 2023-08-12-name.md %}
 {% include 2023-08-06_sql_showcase.md %}
 {% include 2023-08-06_excel_showcase_budget.md %}
 {% include 2023-08-06_advent_of_code.md %}
-{% include 2023-08-06-tableay-showcase_1.md %}
+{% include 2023-08-06-tableau-showcase_1.md %}
+{% include 2023-08-06_flask_showcase.md %}
