@@ -1,4 +1,4 @@
-layout default {% include 2023-08-12-name.md %}
+{% include 2023-08-12-name.md %}
 
 {% include 2023-08-11-contact.md %}
 
