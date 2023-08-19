@@ -1,5 +1,4 @@
-
-## <p style="text-align: center;">Excel Showcase</p>
+<h2 style="text-align: center;">Excel Showcase</h2>
 
 
 ![Dashboard](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/Budget.JPG?raw=true)

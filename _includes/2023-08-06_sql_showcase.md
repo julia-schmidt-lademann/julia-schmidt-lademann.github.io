@@ -1,4 +1,4 @@
-## ## <p style="text-align: center;">SQL Showcase</p>
+<h2 style="text-align: center;">SQL Showcase</h2>
 
 
 Assuming a table A containing members, and the dates when they gained eligibility, lost eligibility and when they signed up.
