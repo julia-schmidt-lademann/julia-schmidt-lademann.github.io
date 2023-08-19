@@ -1,4 +1,5 @@
-## Advent of Code
+## ## <p style="text-align: center;">Advent of Code</p>
+
 
 
 ![Stars](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/AoC.JPG?raw=true)

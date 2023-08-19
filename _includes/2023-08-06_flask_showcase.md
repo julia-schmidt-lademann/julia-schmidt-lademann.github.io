@@ -1,4 +1,5 @@
-## Flask Website Showcase
+## ## <p style="text-align: center;">Flask Website Showcase</p>
+
 
 **Background:**
 - After completing an online course on Python and Flask I wanted to put my learnings into practice.  

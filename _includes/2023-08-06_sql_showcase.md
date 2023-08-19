@@ -1,4 +1,5 @@
-## SQL Showcase
+## ## <p style="text-align: center;">SQL Showcase</p>
+
 
 Assuming a table A containing members, and the dates when they gained eligibility, lost eligibility and when they signed up.
 Assuming a table B containing marketing outreach completed to the different members, and the dates of the outreach attempts.
