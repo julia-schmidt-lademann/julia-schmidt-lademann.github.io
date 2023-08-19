@@ -1,4 +1,4 @@
-## ## <p style="text-align: center;">Flask Website Showcase</p>
+<h2 style="text-align: center;">Flask Website Showcase</h2>
 
 
 **Background:**
