@@ -1,4 +1,4 @@
-<h2 style="text-align: center;">[Best Ball Data Bowl](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/best_ball.py)</h2>
+<h2 style="text-align: center; " href="https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/best_ball.py">Best Ball Data Bowl</h2>
 
 #### Plan:
 - In July 2023 data covering past fantasy draft data was made available.
