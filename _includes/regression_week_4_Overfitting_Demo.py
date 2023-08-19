@@ -56,9 +56,9 @@ def graphlab_print_coefficients(model):
 
     # Numpy has a nifty function to print out polynomials in a pretty way
     # (We'll use it, but it needs the parameters in the reverse order)
-    print 'Learned polynomial for degree ' + str(deg) + ':'
+    print ('Learned polynomial for degree ' + str(deg) + ':')
     w.reverse()
-    print numpy.poly1d(w)
+    print (np.poly1d(w))
 
 def polynomial_regression(data, deg):
     poly = PolynomialFeatures(degree=deg, include_bias=False)

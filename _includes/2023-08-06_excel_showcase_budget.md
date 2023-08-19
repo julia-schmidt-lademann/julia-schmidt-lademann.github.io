@@ -2,7 +2,7 @@
 ## Excel Showcase
 
 
-*There is no visual for this showcase as it contains personal information.*
+![Dashboard](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/Budget.JPG?raw=true)
 
 **Background:**
 - I am interested in creating a zero-based budgeting file. 
@@ -10,6 +10,11 @@
 
 **Visuals:**
 - The visuals mirror the setup of the popular Budgeting app YNAB.
+- The top figure shows money available in the accounts that has not yet been budgeted out to a category. 
+- Each category shows the amount assigned in the current month, the money spent in the current month and money left over considering spending and assignments in past months. 
+- For each category it shows the goal and the amount still required to reach that goal. 
+- There are a number of aggregate statistics summing all categories. 
+- Special highlighting shows if within a category group there is a category with more spent than available. This ensures that even when the category is collapsed overspending is visible and can easily be adressed.
 
 **Functionalities:**
 
@@ -23,7 +28,11 @@
     - This could be identifying payees that a lot of money has been spent at over a period of time
 - The file allows accounts to be classified as being included or excluded in the budget to allow Networth tracking.
     - Changes in investment Accounts should be easily trackable but should not impact the money available for spending on everyday expenses.
-    
+
+<sub>This Report for example shows the monthly spending in a certain category for the current month and 2 prior months. The Category is variable, and the same can be run over a multi-select of Accounts.</sub>
+![Dashboard](https://github.com/julia-schmidt-lademann/julia-schmidt-lademann.github.io/blob/main/_includes/budget_reporting.JPG?raw=true)
+
+
 **Technical Details:**
 - The bulk of the functionalities lie in the Power Query that allows for the transactions on the different accounts to be combined into a single master datasource. 
 - The transactions are then presented split by category 
