@@ -1,6 +1,6 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
-from sklearn.preprocessing import PolynomialFeatures
+from sklearn.preprocessing import PolynomialFeatures, normalize
 import pandas as pd
 import math
 import random
@@ -63,7 +63,7 @@ def graphlab_print_coefficients(model):
 def polynomial_regression(data, deg):
     poly = PolynomialFeatures(degree=deg, include_bias=False)
     poly_features = poly.fit_transform(data['X1'].to_numpy().reshape(-1, 1))
-    model = LinearRegression()
+    model = LinearRegression(penalty ='l2')
     model.fit(poly_features, data['Y'])
     return model
 
@@ -102,3 +102,5 @@ model = polynomial_regression(data, 2)
 # deg 3 = -8.504 x + 7.392 x - 0.7994
 print_coefficients(model)
 # plot_poly_predictions(data,model)
+
+# https://www.geeksforgeeks.org/ml-implementing-l1-and-l2-regularization-using-sklearn/
