@@ -273,50 +273,52 @@ res = res.groupby('tournament_entry_id').agg({'adp_value_QB_weighted': sum,'adp_
 
 df3=df3.merge(res, left_on='tournament_entry_id', right_on='tournament_entry_id', how='inner')
 
-print ('adp_value_01_weighted',df3['adp_value_01_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_01',df3['adp_value_01'].corr(df3['tournament_round_number']))
-print ('adp_value_02_weighted',df3['adp_value_02_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_02',df3['adp_value_02'].corr(df3['tournament_round_number']))
-print ('adp_value_03_weighted',df3['adp_value_03_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_03',df3['adp_value_03'].corr(df3['tournament_round_number']))
-print ('adp_value_04_weighted',df3['adp_value_04_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_04',df3['adp_value_04'].corr(df3['tournament_round_number']))
-print ('adp_value_05_weighted',df3['adp_value_05_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_05',df3['adp_value_05'].corr(df3['tournament_round_number']))
-print ('adp_value_06_weighted',df3['adp_value_06_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_06',df3['adp_value_06'].corr(df3['tournament_round_number']))
-print ('adp_value_07_weighted',df3['adp_value_07_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_07',df3['adp_value_07'].corr(df3['tournament_round_number']))
-print ('adp_value_08_weighted',df3['adp_value_08_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_08',df3['adp_value_08'].corr(df3['tournament_round_number']))
-print ('adp_value_09_weighted',df3['adp_value_09_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_09',df3['adp_value_09'].corr(df3['tournament_round_number']))
-print ('adp_value_10_weighted',df3['adp_value_10_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_10',df3['adp_value_10'].corr(df3['tournament_round_number']))
-print ('adp_value_11_weighted',df3['adp_value_11_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_11',df3['adp_value_11'].corr(df3['tournament_round_number']))
-print ('adp_value_12_weighted',df3['adp_value_12_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_12',df3['adp_value_12'].corr(df3['tournament_round_number']))
-print ('adp_value_13_weighted',df3['adp_value_13_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_13',df3['adp_value_13'].corr(df3['tournament_round_number']))
-print ('adp_value_14_weighted',df3['adp_value_14_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_14',df3['adp_value_14'].corr(df3['tournament_round_number']))
-print ('adp_value_15_weighted',df3['adp_value_15_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_15',df3['adp_value_15'].corr(df3['tournament_round_number']))
-print ('adp_value_16_weighted',df3['adp_value_16_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_16',df3['adp_value_16'].corr(df3['tournament_round_number']))
-print ('adp_value_17_weighted',df3['adp_value_17_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_17',df3['adp_value_17'].corr(df3['tournament_round_number']))
-print ('adp_value_18_weighted',df3['adp_value_18_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_18',df3['adp_value_18'].corr(df3['tournament_round_number']))
-print ('adp_value_TE_weighted',df3['adp_value_TE_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_TE',df3['adp_value_TE'].corr(df3['tournament_round_number']))
-print ('adp_value_WR_weighted',df3['adp_value_WR_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_WR',df3['adp_value_WR'].corr(df3['tournament_round_number']))
-print ('adp_value_QB_weighted',df3['adp_value_QB_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_QB',df3['adp_value_QB'].corr(df3['tournament_round_number']))
-print ('adp_value_RB_weighted',df3['adp_value_RB_weighted'].corr(df3['tournament_round_number']))
-print ('adp_value_RB',df3['adp_value_RB'].corr(df3['tournament_round_number']))
+
+df_barchart = pd.DataFrame(columns = ["Round", "Correlation"])
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_01_weighted',df3['adp_value_01_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_01',df3['adp_value_01'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_02_weighted',df3['adp_value_02_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_02',df3['adp_value_02'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_03_weighted',df3['adp_value_03_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_03',df3['adp_value_03'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_04_weighted',df3['adp_value_04_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_04',df3['adp_value_04'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_05_weighted',df3['adp_value_05_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_05',df3['adp_value_05'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_06_weighted',df3['adp_value_06_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_06',df3['adp_value_06'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_07_weighted',df3['adp_value_07_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_07',df3['adp_value_07'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_08_weighted',df3['adp_value_08_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_08',df3['adp_value_08'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_09_weighted',df3['adp_value_09_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_09',df3['adp_value_09'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_10_weighted',df3['adp_value_10_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_10',df3['adp_value_10'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_11_weighted',df3['adp_value_11_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_11',df3['adp_value_11'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_12_weighted',df3['adp_value_12_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_12',df3['adp_value_12'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_13_weighted',df3['adp_value_13_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_13',df3['adp_value_13'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_14_weighted',df3['adp_value_14_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_14',df3['adp_value_14'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_15_weighted',df3['adp_value_15_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_15',df3['adp_value_15'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_16_weighted',df3['adp_value_16_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_16',df3['adp_value_16'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_17_weighted',df3['adp_value_17_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_17',df3['adp_value_17'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_18_weighted',df3['adp_value_18_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_18',df3['adp_value_18'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_TE_weighted',df3['adp_value_TE_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_TE',df3['adp_value_TE'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_WR_weighted',df3['adp_value_WR_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_WR',df3['adp_value_WR'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_QB_weighted',df3['adp_value_QB_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_QB',df3['adp_value_QB'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_RB_weighted',df3['adp_value_RB_weighted'].corr(df3['tournament_round_number'])]
+df_barchart.loc[len(df_barchart.index)] = ['adp_value_RB',df3['adp_value_RB'].corr(df3['tournament_round_number'])]
 
        # findings:
        # - weighting gives the correlation (i.e. prediction value) a ~17% boost
@@ -326,21 +328,14 @@ print ('adp_value_RB',df3['adp_value_RB'].corr(df3['tournament_round_number']))
 # assuming we use rounds 1-14. as this is the accepted standard
 # what teams would fall into different bins for weighted vs unweighted ADP.
 # accuracy may not be massively improved but a better selection of teams may be forecasted
-df4 = df3[['draft_time', 'clock', 'pick_order', 'tournament_round_number',
-       'adp_value_14','adp_value_14_weighted']].copy()
+# df4 = df3[['draft_time', 'clock', 'pick_order', 'tournament_round_number','adp_value_14','adp_value_14_weighted']].copy()
+# df4['binned_variable'] = pd.qcut(df['adp_value_14'], 10, labels=False)
+# df4['binned_weighted_variable'] = pd.qcut(df['adp_value_14_weighted'], 10, labels=False)
 #
-# bins = [-812.703, -640.7, -470.4, -300.1, -129.8,40.5,210.8,381.1,551.4,721.7, 892.0]
-# labels = [1,2,3,4,5,6,7,8,9,10]
-# bins_weighted=[-46756.776,-37992.4,-29314.8,-20637.2,-11959.6,-3282.0,5395.6,14073.2,22750.8,31428.4, 40106.0]
-# variable means that all bins have the same number of teams in them
-df4['binned_variable'] = pd.qcut(df['adp_value_14'], 10, labels=False)
-df4['binned_weighted_variable'] = pd.qcut(df['adp_value_14_weighted'], 10, labels=False)
-# df4['binned_variable'] = pd.cut(df4['adp_value_14'], bins=bins, labels=labels)
-# df4['binned_weighted_variable'] = pd.cut(df4['adp_value_14_weighted'], bins=bins_weighted, labels=labels)
+print (df_barchart.head())
+#
+# res2 = df4.groupby(['binned_variable','binned_weighted_variable'])['binned_variable'].count()
+# print (res2)
 
-print (df4.head())
-
-res2 = df4.groupby(['binned_variable','binned_weighted_variable'])['binned_variable'].count()
-print (res2)
-
-print (pd.plot.bar(df4))
+df_barchart.plot.bar(x="Round", y="Correlation", title="Advancement rate correlation by ADO per round")
+plt.show(block=True)
