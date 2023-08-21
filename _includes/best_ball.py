@@ -3,6 +3,7 @@
 # # !pip install nfl_data_py
 # import nfl_data_py as nfl
 import pandas as pd
+import matplotlib.pyplot as plt
 """
 Here I was identifying what data is available in the nfl_data_py dataset. However the size of the data was rendering the processing very slow, and I didn't need the data, so this is kept to show my work but not currently used.
 """
@@ -112,7 +113,7 @@ for x in paths:
 # final_weekly_performance_data = weekly_results.copy()
 
 """# Creating a single dataset combining draft and performance data, currently commented out but readily available when needed."""
-
+print ("Ingestion done")
 # # this resets the data to the original without requiring re-ingesting
 df2=df.copy() ###.merge(final_weekly_performance_data, left_on='player_name', right_on='name', how='outer')
 # # print (df2.head())
@@ -341,3 +342,5 @@ print (df4.head())
 
 res2 = df4.groupby(['binned_variable','binned_weighted_variable'])['binned_variable'].count()
 print (res2)
+
+print (pd.plot.bar(df4))
