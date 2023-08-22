@@ -14,3 +14,4 @@
 {% include 2023-08-06_flask_showcase.md %}
 {% include 2023-08-06_advent_of_code.md %}
 {% include 2023-08-06_best_ball_mania.md %}
+{% include 2023-08-06_pandas.md %}
