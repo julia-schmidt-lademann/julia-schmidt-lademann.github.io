@@ -66,7 +66,11 @@ winners=winners.merge(FT_winners_Doubled,how='left',on=['Season'])
 double_impact = winners[winners['FT Team']!= winners['FT Team D']]
 print (double_impact)
 HT_impact = winners[winners['FT Team']!= winners['HT Team']].reset_index()
+colors=pd.DataFrame({'HT Team':['Chelsea','Arsenal','Man United'],'Color':['blue','red','magenta']})
+HT_impact=HT_impact.merge(colors,how='left',on=['HT Team'])
 print (HT_impact)
 
-plt.bar(HT_impact['Season'],HT_impact['rank FT_y'],tick_label=HT_impact['HT Team'])
+plt.bar(HT_impact['Season'],HT_impact['rank FT_y'],tick_label=HT_impact['Season'],color=HT_impact['Color'])
+plt.legend(['Chelsea','Arsenal','Man United'], ncol = 3)
 plt.show()
+
